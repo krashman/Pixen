@@ -70,7 +70,7 @@
 		C96541EB13FF44A600F1F83C /* PXDeleteCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = C96541E913FF44A600F1F83C /* PXDeleteCollectionView.h */; };
 		C96541EC13FF44A600F1F83C /* PXDeleteCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C96541EA13FF44A600F1F83C /* PXDeleteCollectionView.m */; };
 		C968A8E114A5292700905E3D /* Pixen128.png in Resources */ = {isa = PBXBuildFile; fileRef = C968A8E014A5292700905E3D /* Pixen128.png */; };
-		C969A18E13D2012A00F1C1FE /* QLPlugin.qlgenerator in Copy QuickLook plugin */ = {isa = PBXBuildFile; fileRef = C969A18A13D200B400F1C1FE /* QLPlugin.qlgenerator */; };
+		C969A18E13D2012A00F1C1FE /* QLPlugin.qlgenerator in Copy QuickLook plugin */ = {isa = PBXBuildFile; fileRef = C969A18A13D200B400F1C1FE /* QLPlugin.qlgenerator */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C96BABB513ABD3AB00015C92 /* PXHotkeysPreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BABB313ABD3AB00015C92 /* PXHotkeysPreferences.xib */; };
 		C96BABBB13ABD44A00015C92 /* PXHotkeysPreferencesController.h in Headers */ = {isa = PBXBuildFile; fileRef = C96BABB813ABD44A00015C92 /* PXHotkeysPreferencesController.h */; };
 		C96BABBC13ABD44A00015C92 /* PXHotkeysPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96BABB913ABD44A00015C92 /* PXHotkeysPreferencesController.m */; };
@@ -552,10 +552,10 @@
 		C9ACC28215C70AB300D157CB /* RegularSize@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9C3B51815C6FB6F00BA5E0B /* RegularSize@2x.png */; };
 		C9ACC28315C70AB300D157CB /* SmallSize.png in Resources */ = {isa = PBXBuildFile; fileRef = C9C3B51915C6FB6F00BA5E0B /* SmallSize.png */; };
 		C9ACC28415C70AB300D157CB /* SmallSize@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9C3B51A15C6FB6F00BA5E0B /* SmallSize@2x.png */; };
-		C9ACC28615C70AB300D157CB /* QLPlugin.qlgenerator in Copy QuickLook plugin */ = {isa = PBXBuildFile; fileRef = C969A18A13D200B400F1C1FE /* QLPlugin.qlgenerator */; };
+		C9ACC28615C70AB300D157CB /* QLPlugin.qlgenerator in Copy QuickLook plugin */ = {isa = PBXBuildFile; fileRef = C969A18A13D200B400F1C1FE /* QLPlugin.qlgenerator */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C9ACC28815C70AB300D157CB /* colorpalette.png in Copy Color Palette */ = {isa = PBXBuildFile; fileRef = EAC917090CE7DC7300E519E1 /* colorpalette.png */; };
 		C9ACC29B15C70B9400D157CB /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9ACC29A15C70B9400D157CB /* Sparkle.framework */; };
-		C9ACC29C15C70BAA00D157CB /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C9ACC29A15C70B9400D157CB /* Sparkle.framework */; };
+		C9ACC29C15C70BAA00D157CB /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C9ACC29A15C70B9400D157CB /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C9AD353D1506DD7800A4B25C /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9AD353C1506DD7800A4B25C /* Defaults.plist */; };
 		C9ADD4A214007FE500257E38 /* PXClickableView.h in Headers */ = {isa = PBXBuildFile; fileRef = C9ADD4A014007FE500257E38 /* PXClickableView.h */; };
 		C9ADD4A314007FE500257E38 /* PXClickableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ADD4A114007FE500257E38 /* PXClickableView.m */; };
@@ -3071,7 +3071,7 @@
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0820;
 			};
 			buildConfigurationList = 616BAEA908553EFB004CF172 /* Build configuration list for PBXProject "Pixen" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -4476,6 +4476,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Other Sources/Pixen_Prefix.h";
 				INFOPLIST_FILE = Resources/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Pixen.Pixen;
 				PRODUCT_NAME = Pixen;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -4494,6 +4495,7 @@
 				GCC_PREFIX_HEADER = "Other Sources/Pixen_Prefix.h";
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = /Applications;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Pixen.Pixen;
 				PRODUCT_NAME = Pixen;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -4503,22 +4505,32 @@
 		616BAEAA08553EFB004CF172 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -4534,19 +4546,28 @@
 		616BAEAB08553EFB004CF172 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
@@ -4558,7 +4579,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
@@ -4569,6 +4589,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Pixen.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -4578,7 +4599,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -4593,6 +4613,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Pixen.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -4615,6 +4636,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "GTK=1";
 				INFOPLIST_FILE = "PixenGatekeeper-Info.plist";
 				INSTALL_PATH = /Applications;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Pixen.Pixen;
 				PRODUCT_NAME = Pixen;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -4635,6 +4657,7 @@
 				GCC_PREFIX_HEADER = "Other Sources/Pixen_Prefix.h";
 				GCC_PREPROCESSOR_DEFINITIONS = "GTK=1";
 				INFOPLIST_FILE = "PixenGatekeeper-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Pixen.Pixen;
 				PRODUCT_NAME = Pixen;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

@@ -63,6 +63,8 @@
 			<array>
 				<string>gif</string>
 			</array>
+			<key>CFBundleTypeName</key>
+			<string>GIF image</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSItemContentTypes</key>
@@ -71,8 +73,6 @@
 			</array>
 			<key>LSTypeIsPackage</key>
 			<false/>
-			<key>CFBundleTypeName</key>
-			<string>GIF image</string>
 			<key>NSDocumentClass</key>
 			<string>PXCanvasDocument</string>
 		</dict>
@@ -82,6 +82,8 @@
 				<string>jpg</string>
 				<string>jpeg</string>
 			</array>
+			<key>CFBundleTypeName</key>
+			<string>JPEG image</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSItemContentTypes</key>
@@ -90,8 +92,6 @@
 			</array>
 			<key>LSTypeIsPackage</key>
 			<false/>
-			<key>CFBundleTypeName</key>
-			<string>JPEG image</string>
 			<key>NSDocumentClass</key>
 			<string>PXCanvasDocument</string>
 		</dict>
@@ -104,6 +104,8 @@
 			<array>
 				<string>image/png</string>
 			</array>
+			<key>CFBundleTypeName</key>
+			<string>PNG image</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSItemContentTypes</key>
@@ -112,8 +114,6 @@
 			</array>
 			<key>LSTypeIsPackage</key>
 			<false/>
-			<key>CFBundleTypeName</key>
-			<string>PNG image</string>
 			<key>NSDocumentClass</key>
 			<string>PXCanvasDocument</string>
 		</dict>
@@ -123,6 +123,8 @@
 				<string>tiff</string>
 				<string>tif</string>
 			</array>
+			<key>CFBundleTypeName</key>
+			<string>TIFF image</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSItemContentTypes</key>
@@ -131,8 +133,6 @@
 			</array>
 			<key>LSTypeIsPackage</key>
 			<false/>
-			<key>CFBundleTypeName</key>
-			<string>TIFF image</string>
 			<key>NSDocumentClass</key>
 			<string>PXCanvasDocument</string>
 		</dict>
@@ -141,6 +141,8 @@
 			<array>
 				<string>bmp</string>
 			</array>
+			<key>CFBundleTypeName</key>
+			<string>BMP image</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSItemContentTypes</key>
@@ -149,8 +151,6 @@
 			</array>
 			<key>LSTypeIsPackage</key>
 			<false/>
-			<key>CFBundleTypeName</key>
-			<string>BMP image</string>
 			<key>NSDocumentClass</key>
 			<string>PXCanvasDocument</string>
 		</dict>
@@ -159,6 +159,8 @@
 			<array>
 				<string>ico</string>
 			</array>
+			<key>CFBundleTypeName</key>
+			<string>ICO image</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSItemContentTypes</key>
@@ -167,8 +169,6 @@
 			</array>
 			<key>LSTypeIsPackage</key>
 			<false/>
-			<key>CFBundleTypeName</key>
-			<string>ICO image</string>
 			<key>NSDocumentClass</key>
 			<string>PXCanvasDocument</string>
 			<key>NSPersistentStoreTypeKey</key>
@@ -247,12 +247,12 @@
 			<array>
 				<string>pxpattern</string>
 			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>PixenPattern</string>
 			<key>CFBundleTypeName</key>
 			<string>Pixen Pattern</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
-			<key>CFBundleTypeIconFile</key>
-			<string>PixenPattern</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -326,7 +326,7 @@
 	<key>CFBundleIconFile</key>
 	<string>Pixen</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.Pixen.Pixen</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
